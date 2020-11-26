@@ -10,7 +10,8 @@
   "main": "index.js",
   "scripts": {
     "test": "nyc mocha && npm run lint",
-    "lint": "eslint --cache --max-warnings 0 index.js test/test.js"
+    "lint": "eslint --cache --max-warnings 0 index.js test/test.js",
+    "browserify": "rm dist/* && browserify lib/jsonschema-tools.js -o dist/jsonschema-tools-dist.$npm_package_version.js"
   },
   "bin": {
     "jsonschema-tools": "./scripts/jsonschema-tools.js"
@@ -45,12 +46,13 @@
     "yargs": "^14.0.0"
   },
   "devDependencies": {
-    "test-fixture": "^2.4.1",
-    "mocha": "^6.2.0",
-    "nyc": "^14.1.1",
+    "browserify": "^17.0.0",
     "eslint": "^6.3.0",
     "eslint-config-wikimedia": "^0.14.1",
     "eslint-plugin-jsdoc": "^15.9.1",
-    "eslint-plugin-json": "^1.4.0"
+    "eslint-plugin-json": "^1.4.0",
+    "mocha": "^6.2.0",
+    "nyc": "^14.1.1",
+    "test-fixture": "^2.4.1"
   }
 }

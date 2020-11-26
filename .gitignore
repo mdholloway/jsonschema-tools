@@ -6,3 +6,4 @@ npm-debug.log
 .eslintcache
 .nyc_output
 .bin
+.idea
